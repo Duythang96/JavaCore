@@ -21,11 +21,12 @@ public class RevenueManagerment {
             if (Main.receipts.get(i).getMonth()==monthForRev && Main.receipts.get(i).getYear()==yearForRev){
                 temp = true;
                 for (int j = 0; j < Main.receipts.get(i).getFoodList().size(); j++) {
-                    priceTotal+= Main.receipts.get(i).getFoodList().get(j).getMenulist().get(j).getFoodPrice() * Main.receipts.get(i).getFoodList().get(j).getMenulist().get(j).getAmount();
-                    System.out.println("Tiền món thứ "+j+":"+priceTotal);
+                    priceTotal+= Main.receipts.get(i).getFoodList().get(j).getMenulist().get(0).getFoodPrice() * Main.receipts.get(i).getFoodList().get(j).getAmount();
+                    System.out.println("Tổng tiền bán hàng trong tháng "+monthForRev+":"+priceTotal);
                 }
             }
         }
+        System.out.println("Tổng tiền bán hàng trong tháng "+monthForRev+":"+priceTotal);
         if (temp==true){
             int turnover = priceTotal-priceIn;
             if (turnover>0){

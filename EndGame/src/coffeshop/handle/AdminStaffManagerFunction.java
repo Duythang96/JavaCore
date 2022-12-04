@@ -101,54 +101,6 @@ public class AdminStaffManagerFunction {
                 }
             }
         }while (true);
-
-//        for (Staff staffs:users){
-//            if (staffs.getId()==staffID){
-//                long signingTime = staffs.getcontractDate().getTime(); //ngày ký hđ
-//                long dateNow = now.getTime();  // ngày hiện tại
-//                long temp1 = Math.abs(dateNow-signingTime);
-//                long dayTotal = temp1/(24*60*60*1000);  // chuyển ms sang ngày
-//
-//                if (dayTotal>0&&dayTotal<365){
-//                    // làm dưới 1 năm: lương cơ bản
-//                    int salarys = staffs.getSalary();
-//                    int salaryPerDay = salarys/22; //lương tính theo ngày
-//                    System.out.println("Mời nhập số ngày nghỉ trong tháng: ");
-//                    int dayOff = Integer.parseInt(scanner.nextLine());
-//                    int total = salarys-(dayOff*salaryPerDay); // lương = lương - ngày nghỉ
-//                    System.out.println("Lương của nhân viên "+staffs.getUserName()+": "+total);
-//                    temp = false;
-//                    break;
-//                }
-//                if (dayTotal>365&&dayTotal<=730){
-//                    // làm trên 1 năm: lương + 20%
-//                    int salarys = staffs.getSalary();
-//                    int salaryPerDay = salarys/22; //lương tính theo ngày
-//                    salarys= salarys+(int)((float)salarys*0.2f);
-//                    System.out.println("Mời nhập số ngày nghỉ trong tháng: ");
-//                    int dayOff = Integer.parseInt(scanner.nextLine());
-//                    int total = salarys-(dayOff*salaryPerDay); // lương = lương*hệ số - ngày nghỉ
-//                    System.out.println("Lương của nhân viên "+staffs.getUserName()+": "+total);
-//                    temp = false;
-//                    break;
-//                }
-//                if (dayTotal<730) {
-//                    // làm trên 3 năm: lương + 50%
-//                    int salarys = staffs.getSalary();
-//                    int salaryPerDay = salarys / 22; //lương tính theo ngày
-//                    salarys = salarys + (int) ((float) salarys * 0.5f);
-//                    System.out.println("Mời nhập số ngày nghỉ trong tháng: ");
-//                    int dayOff = Integer.parseInt(scanner.nextLine());
-//                    int total = salarys - (dayOff * salaryPerDay); // lương = lương*hệ số - ngày nghỉ
-//                    System.out.println("Lương của nhân viên " + staffs.getUserName() + ": " + total);
-//                    temp = false;
-//                    break;
-//                }
-//            }
-//        }
-//            if (temp==true){
-//                System.out.println("Không tìm thấy ID này!");
-//            }
     }
 
     private void deleteStaff(Scanner scanner,ArrayList<Staff> users) {

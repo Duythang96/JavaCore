@@ -2,8 +2,8 @@ package coffeshop.entity;
 
 public class Admin {
     private int id = 1;
-    private String adminAccount= ("duythang");
-    private String adminPass=("duythang96");
+    private String adminAccount= ("admin");
+    private String adminPass=("admin");
 
     public int getId() {
         return id;

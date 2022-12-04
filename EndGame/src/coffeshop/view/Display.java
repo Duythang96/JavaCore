@@ -1,6 +1,7 @@
-package coffeshop.handle;
+package coffeshop.view;
 
 import coffeshop.entity.Staff;
+import coffeshop.handle.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;

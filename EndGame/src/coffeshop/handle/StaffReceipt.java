@@ -12,13 +12,17 @@ public class StaffReceipt {
         do {
             Receipt receipt = receiptHandle.receiptInput(sc,userName);
             Main.receipts.add(receipt);
-            System.out.println("Bạn muốn lập thêm hóa đơn không:");
+            System.out.println("Bạn muốn in hóa đơn không:");
             System.out.println("1. Có");
             System.out.println("2. Không");
             int temp = 2;
             int choose = choiceFunciton(sc,temp);
             if (choose==2){
                 break;
+            }
+            if (temp==1){
+                System.out.println("---Hóa đơn---");
+
             }
         }while (true);
         System.out.println("Nhập hóa đơn thành công!");

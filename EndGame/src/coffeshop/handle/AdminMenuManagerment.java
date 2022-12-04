@@ -2,6 +2,7 @@ package coffeshop.handle;
 
 import coffeshop.constants.Constant;
 import coffeshop.entity.Menu;
+import coffeshop.handle.MenuHandle;
 import coffeshop.mainrun.Main;
 
 import java.util.ArrayList;
@@ -32,6 +33,21 @@ public class AdminMenuManagerment {
             }
         }while (true);
     }
+
+//    private void menuTemp() {
+//        Menu menu1 = new Menu("Cocacola",Constant.DR.value,10000 );
+//        Menu menu2 = new Menu("Pepsi",Constant.DR.value,10000 );
+//        Menu menu3 = new Menu("Vịt quay",Constant.MC.value,150000 );
+//        Menu menu4 = new Menu("Gà hấp",Constant.MC.value,10000 );
+//        Menu menu5 = new Menu("Súp",Constant.TM.value,10000 );
+//        Menu menu6 = new Menu("Khoai chiên",Constant.TM.value,10000 );
+//        Main.menus.add(menu1);
+//        Main.menus.add(menu2);
+//        Main.menus.add(menu3);
+//        Main.menus.add(menu4);
+//        Main.menus.add(menu5);
+//        Main.menus.add(menu6);
+//    }
 
     private void showMenu(Scanner sc,ArrayList<Menu> menus) {
         System.out.println("Bạn muốn xem menu loại đồ ăn nào: ");
@@ -66,9 +82,6 @@ public class AdminMenuManagerment {
         }
         if (functionChoice==4) {
             return;
-        }
-        for (int i = 0; i <Main.menus.size() ; i++) {
-            System.out.println(Main.menus);
         }
     }
 

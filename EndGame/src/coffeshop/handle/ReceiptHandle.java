@@ -1,5 +1,6 @@
 package coffeshop.handle;
 
+import coffeshop.entity.Menu;
 import coffeshop.entity.Order;
 import coffeshop.entity.Receipt;
 import coffeshop.mainrun.Main;
@@ -37,15 +38,34 @@ public class ReceiptHandle {
                     }
                 }while (true);
                 temp = false;
+                ArrayList<Menu> menuOrder = new ArrayList<>();
                 for (int i = 0; i < Main.menus.size(); i++) {
                     if (Main.menus.get(i).getId()==foodIdforRe){
-                        OrderHandle orderHandle = new OrderHandle();
-                        Order order = orderHandle.orderInput(sc);
+                        menuOrder.add(Main.menus.get(i));
+                        System.out.println("Mời nhập số lượng: ");
+                        int foodAmount = numberInputCheck(sc);
+                        Order order = new Order(foodAmount,menuOrder);
                         oderReceipt.add(order);
                         temp = true;
                     }
+
                 }
-                System.out.println("Bạn muốn chọn thêm đồ không:");
+                if (temp==true){
+                    System.out.println("Bạn muốn chọn thêm đồ không:");
+                    System.out.println("1. Có");
+                    System.out.println("2. Không");
+                    int temp2 = 2;
+                    int choose = choiceFunciton(sc,temp2);
+                    if (choose==2){
+                        break;
+                    }
+                }
+                if (temp==false){
+                    break;
+                }
+            }while (true);
+            if (temp==false){
+                System.out.println("Không tìm thấy id này!Bạn muốn nhập lại không");
                 System.out.println("1. Có");
                 System.out.println("2. Không");
                 int temp2 = 2;
@@ -53,9 +73,6 @@ public class ReceiptHandle {
                 if (choose==2){
                     break;
                 }
-            }while (true);
-            if (temp==false){
-                System.out.println("Không tìm thấy id này!Mời nhập lại");
             }
             if (temp==true){
                 break;
@@ -65,6 +82,7 @@ public class ReceiptHandle {
         Receipt receipt = new Receipt(year,month,staffName,oderReceipt);
         return receipt;
     }
+
 
     public int numberInputCheck(Scanner sc){
         int number;
