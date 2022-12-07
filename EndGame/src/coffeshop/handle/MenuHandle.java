@@ -10,7 +10,7 @@ public class MenuHandle {
         System.out.println("Mời bạn nhập loại menu bạn muốn thêm: ");
         String foodType = foodTypeInput(sc);
         //
-        System.out.println("Mời bạn nhập tên đồ uống: ");
+        System.out.println("Mời bạn nhập tên món: ");
         String foodName = sc.nextLine();
         //
         System.out.println("Mời bạn nhập giá cho món này: ");
